@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - Entry point.
- * Description: Print the last digit of the number stored in the variable n.
+ * Description: Check last digit of the number stored in random n print result.
  * Result: 0 (Success).
  */
 int main(void)
