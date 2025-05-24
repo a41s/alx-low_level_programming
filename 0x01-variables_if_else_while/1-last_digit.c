@@ -4,7 +4,7 @@
 /**
  * main - Entry point.
  * Description: Check last digit of the number stored in random n print result.
- * Result: 0 (Success).
+ * Return: 0 (Success).
  */
 int main(void)
 {
