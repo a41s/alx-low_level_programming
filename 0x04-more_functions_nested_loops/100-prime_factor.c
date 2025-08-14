@@ -1,7 +1,8 @@
 #include "main.h"
-/*
- * main - A function that finds and prints the largest prime factor of a number.
- * Return: 0 (success), -1 (otherwise).
+/**
+ * main - A function that finds and prints the largest prime factor
+ * number 612852475143.
+ * Return: 0.
  */
 int main(void)
 {
