@@ -7,11 +7,11 @@
 int IsDelimiter(char c)
 {
 	int i;
-	char delimiter[] = " \t\n,.!?\"(){}";
+	int delimiter[13] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 	{
-		if (c == delimiter[i])
+		if (delimiter[i] == c)
 			return (1);
 	}
 	return (0);
@@ -24,10 +24,10 @@ int IsDelimiter(char c)
  */
 int IsALetter(char c)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	return (c >= 97 && c <= 122);
 }
 
- /**
+/**
  * cap_string - A function that capitalizes all words of a string.
  * @str: An input.
  * Return: A string.
@@ -38,12 +38,9 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (IsDelimiter(str[i - 1]) && IsALetter(str[i]))
-		{
-			if (str[i] >= 97 && str[i] <= 122)
-				str[i] -= 32;
-		}
+		if (IsALetter(str[i]) && IsDelimiter(str[i - 1]))
+			str[i] -= 32;
 		i++;
-	}
+	};
 	return (str);
 }
